@@ -15,8 +15,7 @@ rule warn-aider-shell-exec {
   AND input.command STARTS_WITH "/run"
   severity warning
   priority 90
-  ASK execution
-  PROMPT "Allow Aider to run the shell command: ${input.command}?"
+  LOG execution
 }
 
 rule block-aider-config-edit {
